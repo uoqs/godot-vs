@@ -66,23 +66,25 @@
     <NMakeOutput>
     </NMakeOutput>
     <NMakePreprocessorDefinitions>_DEBUG;$(NMakePreprocessorDefinitions)</NMakePreprocessorDefinitions>
-    <NMakeBuildCommandLine>scons dev_build=yes</NMakeBuildCommandLine>
-    <NMakeCleanCommandLine>scons --clean dev_build=yes</NMakeCleanCommandLine>
+    <NMakeBuildCommandLine>scons arch=x86_64 dev_build=yes</NMakeBuildCommandLine>
+    <NMakeCleanCommandLine>scons --clean arch=x86_64 dev_build=yes</NMakeCleanCommandLine>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
-    <NMakeOutput>game-cpp.exe</NMakeOutput>
+    <NMakeOutput>
+    </NMakeOutput>
     <NMakePreprocessorDefinitions>WIN32;_DEBUG;$(NMakePreprocessorDefinitions)</NMakePreprocessorDefinitions>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
-    <NMakeOutput>game-cpp.exe</NMakeOutput>
+    <NMakeOutput>
+    </NMakeOutput>
     <NMakePreprocessorDefinitions>WIN32;NDEBUG;$(NMakePreprocessorDefinitions)</NMakePreprocessorDefinitions>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
     <NMakeOutput>
     </NMakeOutput>
     <NMakePreprocessorDefinitions>NDEBUG;$(NMakePreprocessorDefinitions)</NMakePreprocessorDefinitions>
-    <NMakeBuildCommandLine>scons target=template_release production=yes</NMakeBuildCommandLine>
-    <NMakeCleanCommandLine>scons --clean target=template_release production=yes</NMakeCleanCommandLine>
+    <NMakeBuildCommandLine>scons arch=x86_64 target=template_release production=yes</NMakeBuildCommandLine>
+    <NMakeCleanCommandLine>scons --clean arch=x86_64 target=template_release production=yes</NMakeCleanCommandLine>
   </PropertyGroup>
   <ItemDefinitionGroup>
   </ItemDefinitionGroup>
