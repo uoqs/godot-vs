@@ -1,0 +1,28 @@
+Submodule godot contains modified content
+diff --git a/godot/SConstruct b/godot/SConstruct
+index 0afdb07b35..db7cd1a2a1 100644
+--- a/godot/SConstruct
++++ b/godot/SConstruct
+@@ -580,7 +580,7 @@ if selected_platform in platform_list:
+     # Needs to happen after configure to have `env.msvc` defined.
+     if env.msvc:
+         if env["debug_symbols"]:
+-            env.Append(CCFLAGS=["/Zi", "/FS"])
++            env.Append(CCFLAGS=["/ZI", "/FS"])
+             env.Append(LINKFLAGS=["/DEBUG:FULL"])
+         else:
+             env.Append(LINKFLAGS=["/DEBUG:NONE"])
+Submodule godot-cpp contains modified content
+diff --git a/godot-cpp/tools/targets.py b/godot-cpp/tools/targets.py
+index 2161134..7388217 100644
+--- a/godot-cpp/tools/targets.py
++++ b/godot-cpp/tools/targets.py
+@@ -101,7 +101,7 @@ def generate(env):
+     # "custom" means do nothing and let users set their own optimization flags.
+     if env.get("is_msvc", False):
+         if env["debug_symbols"]:
+-            env.Append(CCFLAGS=["/Zi", "/FS"])
++            env.Append(CCFLAGS=["/ZI", "/FS"])
+             env.Append(LINKFLAGS=["/DEBUG:FULL"])
+ 
+         if env["optimize"] == "speed":
